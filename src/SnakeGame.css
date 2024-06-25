@@ -2,21 +2,62 @@
 .game-area {
     width: 500px;
     height: 500px;
-    margin: 20px auto;
-    background-color: #f4f4f4;
+    background-color: #e6fffa;
     position: relative;
-    border: 2px solid #000;
+    border: 2px solid #6b5b95;
+    border-radius: 10px;
+    overflow: hidden;
+    background-image:
+  linear-gradient(to right, rgba(208, 208, 208, 0.5) 1px, transparent 1px),
+  linear-gradient(to bottom, rgba(208, 208, 208, 0.5) 1px, transparent 1px);
+    background-size: 10px 10px;
   }
+  
   .snake-segment {
     width: 10px;
     height: 10px;
-    background-color: green;
+    background-color: #84b6f4;
     position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
   }
   
   .food {
     width: 10px;
     height: 10px;
-    background-color: red;
+    background-color: #fdfd96;
     position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  }
+  .game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .current-score {
+    font-size: 18px;
+    font-weight: bold;
+    color: #6b5b95; /* Dark pastel purple */
+  }
+  
+  .start-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #77dd77; /* Pastel green for button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .start-button:hover {
+    background-color: #66c266; /* Slightly darker green on hover */
+  }
+  
+  .start-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
   }
